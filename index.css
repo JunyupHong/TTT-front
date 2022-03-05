@@ -1,0 +1,325 @@
+@font-face {
+  font-family: '8bit';
+  src: url('./8-BIT_WONDER.TTF') format('woff');
+}
+
+@font-face {
+  font-family: 'dung';
+  src: url('./DungGeunMo.woff') format('woff');
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+.hidden {
+  display: none !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #EDECE8;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+}
+
+#app > section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 720px;
+  height: 1280px;
+}
+
+#game-start {
+  background: url('./game_start.png');
+}
+
+#game-app {
+  background: url('./game_machine_background.png');
+}
+
+
+
+
+
+#game-app > section.game-screen {
+  position: absolute;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  top: 76px;
+  left: 63px;
+  width: 594px;
+  height: 842px;
+  border: solid 3px black;
+}
+
+#game-app > section.game-screen > .game-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50%), calc(-50% - 140px));
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 594px;
+  height: 842px;
+  background: rgba(0, 0, 0, 0.3);
+}
+#game-app > section.game-screen > .game-modal > p {
+  font-size: 100px;
+}
+
+
+#game-app > section.game-screen > .game-wrapper {
+  width: 300%;
+  z-index: 100;
+  display: flex;
+}
+
+#game-app > section.game-screen > .game-wrapper  > article.game {
+  width: 594px;
+  height: 842px;
+}
+
+#game-app > section.button-wrapper {
+  position: absolute;
+  bottom: 82px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 24px;
+  width: 100%;
+  padding: 0 46px;
+}
+
+#game-app > section.button-wrapper > button {
+  width: 136px;
+  height: 136px;
+  border-radius: 50%;
+  opacity: 0.2;
+}
+
+
+#game-end > form {
+  position: absolute;
+  top: 76px;
+  left: 63px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 594px;
+  height: 842px;
+  border: solid 3px black;
+}
+
+
+
+
+
+.game {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#game-1 {
+  background: url('./game_background-1.png');
+}
+
+#game-1 > .character {
+  position: absolute;
+  bottom: 145px;
+}
+
+
+#game-2 {
+  background: url('./game_background-2.png');
+}
+
+#game-2 > .ballon {
+  position: absolute;
+  bottom: calc(50% - 116px);
+  left: calc(50% - 160px);
+
+}
+
+.game-info-wrapper {
+  position: fixed;
+  width: 594px;
+  z-index: 90;
+  padding: 25px 32px 0 32px;
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 24px;
+}
+
+.game-info-wrapper > .game-round {
+  font-family: '8bit'; 
+}
+
+.game-info-wrapper > .game-clock {
+  display: flex;
+  align-items: center;
+  font-family: '8bit';
+}
+
+.game-info-wrapper > .game-clock > img {
+  margin-right: 20px;
+}
+
+
+#game-end {
+  background: url('./game_machine_background.png');
+}
+
+#game-end > section.game-screen {
+  position: absolute;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  top: 76px;
+  left: 63px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 594px;
+  height: 842px;
+  border: solid 3px black;
+  background: url('./game_background-2.png');
+}
+
+#game-end > section.game-screen > p {
+  font-size: 28px;
+  color: #FEFB2D;
+}
+
+#game-end > section.game-screen > .input-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 118px;
+}
+
+#game-end > section.game-screen > .input-wrapper > input {
+  width: 102px;
+  height: 102px;
+  font-size: 40px;
+  background: rgba(255, 255, 255, 0.35);
+  border: solid 3px #FFFFFF;
+  border-radius: 14px;
+}
+
+#game-end > section.game-screen > img {
+  margin: 95px 35px 0 35px;
+
+}
+
+
+#ranking {
+  background: url('./game_machine_background.png');
+}
+
+#ranking > section.game-screen {
+  position: absolute;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  top: 76px;
+  left: 63px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 594px;
+  height: 842px;
+  border: solid 3px black;
+  background: #598CFF;
+}
+
+#ranking > section.game-screen > .list {
+  padding: 35px 0 45px 0;
+
+}
+
+#ranking > section.game-screen > .list > .list-row {
+  width: 120%;
+  transform: translate(-10%, 0);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 18px;
+  margin-bottom: 18px;
+  
+  font-size: 28px;
+  font-family: '8bit';
+}
+
+#ranking > section.game-screen > .list > .list-row > .rank {
+  color: #3F3FE2;
+}
+
+#ranking > section.game-screen > .list > .list-row > .user-score {
+  flex: 1;
+  text-align: end;
+  color: #fff;
+}
+
+#ranking > section.game-screen > .list > .list-row > .user-name {
+  margin-left: 76px;
+  color: #fff;
+}
+
+#ranking > section.game-screen > .score-area {
+  border: solid 3px #fff;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 23px;
+}
+
+#ranking > section.game-screen > .score-area > p {
+  font-family: '8bit';
+  color: #000;
+  font-size: 28px;
+}
+#ranking > section.game-screen > .score-area > div {
+  font-family: '8bit';
+  color: #000;
+  font-size: 48px;
+}
+
+#ranking > section.game-screen > p {
+  font-family: 'dung';
+  color: #fff;
+  font-size: 28px;
+}
+
+#ranking > section.game-screen > .button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  row-gap: 32px;
+  width: 100%;
+  margin-bottom: 31px;
+}
+#ranking > section.game-screen > .button-wrapper > img {
+  margin: 0 16px;
+}
+
+#ranking > section.game-screen > .button-wrapper > img:hover {
+  cursor: pointer;
+}
